@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripition" content="Page Design">
+    <meta name="author" content="Bruno Godinho">
+    <meta name="keywords" content="CSS">
+    <title>Responsive Joker page Landing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#"><img src="./assets/logo.png" alt="Logo" class="logo"></a>
+        <div class="toggle"><img src="./assets/toggle.png" alt=""></div>
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aut dolore atque aliquam nulla! Dolor placeat, est aperiam exercitationem doloremque temporibus cupiditate facere dignissimos adipisci doloribus, quos voluptates esse neque!</p>
+            <a href="#" class="play" onclick="toggle();"><img src="./assets/play.png" alt="">Watch Trailer</a>
+            
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="./assets/facebook.png" alt=""></a></li> 
+                <li><a href="#"><img src="./assets/twitter.png" alt=""></a></li> 
+                <li><a href="#"><img src="./assets/instagram.png" alt=""></a></li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <video src="./assets/trailer.mp4" controls="true"></video>
+        <img src="./assets/close.png" alt="" class="close" onclick="toggle();">
+    </div>
+
+    <script>
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
